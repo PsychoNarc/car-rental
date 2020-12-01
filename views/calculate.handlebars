@@ -1,0 +1,45 @@
+<div class="container" style="margin-top: 2rem;">
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="card" style="width: 18rem;">
+                <img src="{{car.picture}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">{{car.make}} {{car.model}}</h5>
+                    <p class="card-text">Rates:<br></p>
+                    <p class="card-text">Rs{{car.pricePerHour}} per Hour<br></p>
+                    <p class="card-text">Rs{{car.pricePerWeek}} per Week<br></p>
+                    <a href="/displayCar/{{car._id}}" class="btn btn-primary">Contact Owner</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <form action="/calculateTotal/{{car._id}}" method="POST">
+                <div class="form-group">
+                    <label for="hour">Select Renting Time:</label><br>
+                    <label>Hours</label>
+                    <select name="hour" class="form-control">
+                        <option value="0">0</option>
+                        <option value="1">1 hr</option>
+                        <option value="2">2 hrs</option>
+                        <option value="3">3 hrs</option>
+                        <option value="4">4 hrs</option>
+                        <option value="5">5 hrs</option>
+                    </select>
+                    <br>
+                    <label>Weeks</label>
+                    <select name="week" class="form-control">
+                        <option value="0">0</option>
+                        <option value="1">1 week</option>
+                        <option value="2">2 weeks</option>
+                        <option value="3">3 weeks</option>
+                        <option value="4">4 weeks</option>
+                        <option value="5">5 weeks</option>
+                    </select>
+                    <div class="form-group" style="margin-top: 1rem;">
+                        <button type="submit" class="form-control btn btn-danger">Calculate Total</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

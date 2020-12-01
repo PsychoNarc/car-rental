@@ -1,0 +1,27 @@
+<div class="container" style="margin-top: 2rem;">
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="card" style="width: 18rem;">
+                <img src="{{car.picture}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">{{car.make}} {{car.model}}</h5>
+                    <p class="card-text">Rates:<br></p>
+                    <p class="card-text">Rs{{car.pricePerHour}} per Hour<br></p>
+                    <p class="card-text">Rs{{car.pricePerWeek}} per Week<br></p>
+                    <a href="/displayCar/{{car._id}}" class="btn btn-primary">Contact Owner</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <form action="/chargeRenter/{{budjet._id}}" method="POST">
+                <div class="form-group" style="margin-top: 2rem; margin-bottom:2rem;">
+                    <label for="hour">Total is Rs.{{budjet.total}}</label>
+                </div>
+                <script src="https://checkout.stripe.com/checkout.js" data-key="{{StripePublishableKey}}"
+                    class="stripe-button" data-amount="{{stripeTotal}}" data-name="Car Rental"
+                    data-description="Rs.{{budjet.total}} for renting {{car.make}} {{car.model}}"
+                    data-image="/image/logo2.png"></script>
+            </form>
+        </div>
+    </div>
+</div>

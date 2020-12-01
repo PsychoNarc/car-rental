@@ -1,0 +1,41 @@
+showCars:
+<div class="media" style="margin-top: 2rem;">
+    <input type="hidden" id="carID" value="{{_id}}">
+    <img src="{{owner.image}}" class="mr-3" width="64px;" style="margin-bottom: 2rem;">
+    <div class="media-body">
+        <a href="/displayCar/{{_id}}">
+            <h5 class="mt-0">{{make}} {{model}} {{year}}</h5>
+        </a>
+        <div class="row">
+            {{#each image}}
+            <div class="col-sm">
+                <img src="{{imageUrl}}" class="img-fluid" width="300px;" height="auto">
+            </div>
+            {{else}}
+            <img src="/image/logo.png">
+            {{/each}}
+        </div>
+        <p>Rs.{{pricePerHour}} per hour</p>
+        <p>Rs.{{pricePerWeek}} per week</p>
+        <small>{{location}}</small>
+        <small>{{date}}</small>
+    </div>
+</div>
+
+Profile:
+<div class="card" style="width: 18rem; margin-top: 2rem;">
+    <img src="{{user.image}}" class="card-img-top">
+    <div class="card-body">
+        <h5 class="card-title">{{user.firstname}} {{user.lastname}}</h5>
+    </div>
+</div>
+
+Owner and EmailIDs:
+1. Hridayan Phukan: test@test1.com(Toyota Camry)
+2. Sandipan Phukan: test@test2.com(Hundai Creta)
+3. Miki Phukan: test@test3.com(BMW X6)
+4. Gaga Miki: test@test4.com(Mahindra XUV)
+5. Test6 Test6: test@test6.com(Honda City)
+6. Test7 test7: test@test7.com
+8. FBLogin_Hridayan
+9. Test5 Test5: test@test5.com

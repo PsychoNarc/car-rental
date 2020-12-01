@@ -2,3 +2,56 @@
     text-align: center;
     text-justify: distribute;
 }
+
+.green{
+    color: green;
+}
+.red{
+    color: red;
+}
+.heading-primary{
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+    font-weight: 400;
+    color: black;
+}
+.heading-tertiary{
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+    font-weight: 400;
+    color: black;
+}
+.heading-secondary{
+    text-transform: uppercase;
+    margin-bottom: 4rem;
+    font-weight: 400;
+    color: black;
+}
+.btn-1{
+    margin-top: 1rem;
+}
+html{
+    background-image: linear-gradient(to right, rgba(126, 213, 111), rgba(40, 180, 133));
+    height: 100%;
+}
+body{
+    background-image: linear-gradient(to right, rgba(126, 213, 111), rgba(40, 180, 133));
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+#list{
+    margin-bottom: 90px;
+    margin-top: 50px;
+    width: 800px;
+    height: 400px;
+    overflow-y: scroll;
+}
+
+a, a:hover, a:active, a:focus {
+    color: black;
+    text-decoration: none;
+}

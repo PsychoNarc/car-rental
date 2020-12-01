@@ -1,0 +1,32 @@
+{{#each cars}}
+<div class="container">
+    <input type="hidden" id="carID" value="{{_id}}">
+    <div class="row">
+        <div class="row" style="margin-top: 2rem;">
+            {{#each image}}
+            <div class="col-sm">
+                <img src="{{imageUrl}}" class="img-fluid" width="300px;" height="auto">
+            </div>
+            {{else}}
+            <img src="/image/logo.png">
+            {{/each}}
+        </div>
+        <div class="col-sm-4">
+            <div class="card-body">
+                <h5 class="card-title">{{make}}</h5>
+                <p class="card-text">Model: {{model}}, Year: {{year}}</p>
+                <p class="card-text">Rates:<br> Rs.{{pricePerHour}} per hour.<br>Rs.{{pricePerWeek}} per week.
+                </p>
+                <small>Location: {{location}}</small>
+            </div>
+            <div>
+                <a href="/openGoogleMap"><button class="btn btn-danger btn-1">Show in Map</button></a>
+                <a href="/displayCar/{{_id}}"><button class="btn btn-info btn-1">Car Information</button></a>
+            </div>
+        </div>
+    </div>
+</div>
+<hr>
+{{else}}
+<p>No cars found</p>
+{{/each}}
